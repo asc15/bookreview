@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+	Books Review Point
+</title>
+<meta name="viewport"
+		content ="width=device-width,initial-scale=1.0">
+		
+<style>
+	body{
+	padding:20px;
+	background-color:#defcff;
+	text-align:center;
+	}
+	img{
+	width:100%;
+	}
+	div{
+	text-align:center;
+	}
+	.style1{
+	border-radius:50px;
+	background:green;
+	}
+	button{
+	margin:50px
+	height:20px;
+	width:100px;
+	cursor:pointer;
+	background:pink;
+	text:bold;
+	}
+	button:hover{
+	background-color:red;
+	padding:10px;}
+	h2{
+	color:white;
+	}
+	.btn{
+	background-color:red;
+	height:40px;
+	width:150px;
+	border-radius:20px;
+	color:white;
+	}
+	.comment{
+	width:400px;
+	}
+	table{
+	text-align:center;
+	padding:5px;
+	border:5px;
+	}
+	
+
+	
+	</style>
+</head>
+<body>
+	<header>
+		<img src="HEADING.JPG">
+	</header>
+	<div class="style1">
+	<form action="myaccount.html">
+		<button>My Account</button>
+	</form>
+	<form action="logout.html">
+		<button>Logout</button>
+	</form>
+	</div>
+	<div class="style1">
+		<h2>YOUR RESULT...</h2>	
+	</div>
+	<div>
+		{{smessage}}
+		{{emessage}}
+		<table>
+		<tr>
+			<td>ISBN</td>
+			<td>BOOK TITLE</td>
+			<td>BOOK AUTHOR</td>
+			<td>YEAR</td>
+			<td>Review</td>
+			<td>No of reviews</td>
+		</tr>
+		{%if row!=" "%}			
+		<tr>
+			<td>{{row[0]}}</td>
+			<td>{{row[1]}}</td>
+			<td>{{row[2]}}</td>
+			<td>{{row[3]}}</td>
+			<td>{{average_rating}}</td>
+			<td>{{no_of_rating}}</td>
+		</tr>
+		</table>
+	</div>
+	<form>
+	<div>
+		Give your review for the book
+		<input name ="review" type="radio" value="1">1
+		<input name ="review" type="radio" value="2">2
+		<input name ="review" type="radio" value="3">3
+		<input name ="review" type="radio" value="4">4
+		<input name ="review" type="radio" value="5">5
+	</div>
+	<div >Put your comment.
+		<input name="comment" class="comment" type="text"><button>Submit</button>
+	</div>
+	</form>
+	</body>
+</html>	

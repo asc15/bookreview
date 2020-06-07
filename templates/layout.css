@@ -1,0 +1,43 @@
+body{
+	padding:20px;
+	background-color:#defcff;
+	}
+img{
+	width:100%;
+	}
+div{
+	text-align:center;
+	}
+.style1{
+	text:20px;
+	border-radius:50px;
+	background:green;
+	}
+.style2{
+	background-color:#defcff;
+	padding:10px;
+	}
+button{
+	margin:50px
+	height:20px;
+	width:100px;
+	cursor:pointer;
+	background:pink;
+	text:bold;
+	}
+button:hover{
+	background-color:red;
+	padding:10px;}
+	h2{
+	color:white;
+	}
+.btn{
+	background-color:blue;
+	height:40px;
+	width:150px;
+	border-radius:20px;
+	color:white;
+	}
+.btn:hover{
+	background-color:green;
+	}

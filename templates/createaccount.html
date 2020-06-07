@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<title>
+				Create Account
+			</title>
+			<meta name="viewport"
+			content ="width=device-width,initial-scale=1.0">
+		
+			<link href="layout1.css" rel="stylesheet">
+		</head>
+		
+			<body>
+				<h1>
+					Create Your Account
+				</h1>
+					<form METHOD="POST">
+						<div>{{smessage}}{{emessage}}</div>
+					<div>
+						Enter your name &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+						<input name="name" type="text">
+					</div>
+					<div>
+						Enter your email address &nbsp &nbsp
+						<input name="email" type="text"> 
+					</div>
+					<div>
+						Gender &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+						<input name="gender" list ="gender" placeholder= "Select">
+							<datalist id="gender">
+							<option value="MALE">
+							<option value="FEMALE">
+							<option value="OTHER">					
+					</div>
+					<div>	
+						Enter your age &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+						<input name="age",type="number">
+					</div>
+					<div>
+						Select the security question 
+						<input name="securityquestion" list ="securityquestions" placeholder= "Select one">
+							<datalist id="securityquestions">
+							<option value="What is your favourite food?">
+							<option value="What is favourite pet?">
+							<option value="Name of your mother's? hometown">
+							<option value="Name of your favourite movie?">
+					</div>
+					<div>
+						 Enter your answer &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
+						<input name="securityans"  type="text">
+					</div>
+					&nbsp
+					&nbsp
+					&nbsp
+					&nbsp
+					<div>
+						Create Password &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+						<input name="createpassword" type="password">
+					</div>
+					<div>
+						Confirm Password &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+						<input name="confirmpassword" type="password">
+					</div>
+			<div>
+			<button>Create Account</button>
+			</div>
+		</form>
+	</body>
+</html>

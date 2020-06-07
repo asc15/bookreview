@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+	Books Review Point
+</title>
+<meta name="viewport"
+		content ="width=device-width,initial-scale=1.0">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+		
+<style>
+	body{
+	padding:20px;
+	background-color:#defcff;
+	}
+	img{
+	width:100%;
+	}
+	div{
+	text-align:center;
+	}
+	.style1{
+	text:20px;
+	border-radius:50px;
+	background:green;
+	}
+	.style2{
+	background-color:#defcff;
+	padding:10px;
+	}
+	button{
+	margin:50px
+	height:20px;
+	width:100px;
+	cursor:pointer;
+	background:pink;
+	text:bold;
+	}
+	button:hover{
+	background-color:red;
+	padding:10px;}
+	h2{
+	color:white;
+	}
+	.btn{
+	background-color:red;
+	height:40px;
+	width:150px;
+	border-radius:20px;
+	color:white;
+	}
+	.btn:hover{
+	background-color:green;
+	}
+	</style>
+</head>
+<body>
+	<header>
+		<img src="HEADING.JPG">
+	</header>
+	<div>{{emessage}}{{smessage}}</div>
+	<div class="style1">
+		<form action="myaccount.html">
+		<button>My Account</button>
+	</form>
+	<form action="logout.html">
+		<button>Logout</button>
+	</form>
+	<div class="style1">
+		<h2>SEARCH YOUR BOOK...</h2>	
+	</div>
+	<div class="style2">
+	<form>
+		<div class="style2">
+		Enter ISBN number
+		<input type="text" name="searchvalue">
+		</div>
+		<div>OR</div>
+		<div class="style2">
+		Enter Book Title &nbsp &nbsp &nbsp 
+		<input type="text" name="searchvalue">
+		</div>
+		<div class="style2">
+		<button class="btn">SEARCH</button>
+		</div>
+	</form>
+	</div>
+	</body>
+</html>	
