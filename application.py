@@ -1,4 +1,4 @@
-import os
+import os,environ
 from flask import Flask,render_template,session,redirect,request,jsonify
 from sqlalchemy import create_engine
 import Session
@@ -21,7 +21,7 @@ db = scoped_session(sessionmaker(bind=engine))
 
 
 
-@app.route("/")
+@app.route("/",methods=["GET","POST"])
 def index():
     return render_template("frontpage.html")
 
@@ -101,7 +101,7 @@ def mainpage(isbn):
                     return render_template("bookmain.html", emessage="Book not found!")
                 else:
                     res=requests.get("https://www.goodreads.com/book/review_counts.json",
-                                                        params={"key": os.getenv("KEY"), "isbn": isbn})
+                                                        params={"key": os.environ.get('KEY'), "isbn": isbn})
                     data = res.json()
                     no_of_rating = data["books"]["work_ratings_count"]
                     average_rating = data["books"]["average_rating"]
@@ -115,7 +115,7 @@ def mainpage(isbn):
                 else:
 
                     res=requests.get("https://www.goodreads.com/book/review_counts.json",
-                                                        params={"key":os.getenv("KEY"), "isbn": isbn})
+                                                        params={"key":os.environ.get('KEY'), "isbn": isbn})
                     data = res.json()
                     no_of_rating = data["books"]["work_ratings_count"]
                     average_rating = data["books"]["average_rating"]
@@ -232,4 +232,4 @@ def booksapi(isbn):
 
 
 if __name__=="__main__":
-    app.run(debug=True)
+    app.run()
